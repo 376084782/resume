@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding:0;
+}
+html,body{
+    height:100%;
+    width: 100%;
+}
+.wrapper1{
+    min-height: 1000px;
+    z-index: 7777;
+    width:100%;
+    overflow: hidden;
+}
+.wrapper{
+    position: relative;
+    width: 100%;
+    min-height:1000px;
+}
+.main{
+    height:100%;
+    width:100%;
+    min-height:1000px;
+
+}
+.main-info{
+    background-color: #C7F5BC;
+}
+.skills{
+    background-color: #B7E3F3;
+}
+.exp{
+    background-color: #B7CAF2;
+}
+@keyframes falldown {
+    0%{
+        transform-origin:left 0;
+        top:0;
+    }
+    20%{
+        transform-origin:left 0;
+        transform: rotateZ(5deg);
+        top:0;
+    }
+    100%{
+        transform-origin:left 0px;
+        transform: rotateZ(45deg);
+        top:1400px;
+    }
+}
+@keyframes layin {
+    0%{
+        transform-origin:right 0px;
+        transform: rotateZ(-45deg);
+        top:1400px;
+
+    }
+    80%{
+        transform-origin:right 0;
+        transform: rotateZ(-5deg);
+        top:0;
+    }
+    100%{
+        transform-origin:right 0;
+        top:0;
+    }
+
+}
+.wrapper.ng-enter{
+    animation: layin .5s linear;
+
+}
+.wrapper.ng-leave{
+    animation: falldown .4s linear;
+}
+.ng-enter{
+    z-index:9999;
+}
+.ng-leave{
+    z-index:8888;
+}
+.bottom{
+    position: fixed;
+    top:0;
+    z-index: -1;
+    height:100%;
+    width: 100%;
+    background-color: #E3F7A7;
+}
+.menu{
+    height:40px;
+    width:400px;
+    margin: 0 auto;
+}
+.menu li{
+    list-style: none;
+    float: left;
+    width:33.333%;
+    font-size: 30px;
+    font-family: "Microsoft YaHei UI";
+}
+.menu a{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height:100%;
+    color:white;
+
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    text-shadow:2px 2px 5px grey;
+    text-decoration: none;
+}
+.current-menu{
+    text-shadow:2px 2px 5px black;
+}
+.menu-wrapper{
+    padding-top: 80px;
+}
+.left{
+    position: fixed;
+    left:0;
+    width:40px;
+    height:100%;
+}
+.left a{
+    display: block;
+    height: 300px;
+    position: relative;
+    top:300px;
+}
+.left a:hover{
+    color:rgb(33, 153, 224);
+}
+.right a:hover{
+    color:rgb(33, 153, 224);
+}
+.left span{
+    font-size: 60px;
+    transform: scaleY(4);
+}
+.right{
+    margin-right: 40px;
+    position: fixed;
+    right:0;
+    width:40px;
+    height:100%;
+}
+.right a{
+    display: block;
+    height: 300px;
+    position: relative;
+    top:300px;
+}
+.right span{
+    font-size: 60px;
+    transform: scaleY(4);
+}
+.info{
+    width: 600px;
+    text-align: center;
+    font-family: "Microsoft JhengHei";
+    font-weight: 700;
+    font-size: 25px;
+    color:#7D7D7D;
+    position: absolute;
+    top: 300px;
+    left:50%;
+    margin-left: -300px;
+}
+.info tr{
+    height:50px;
+}
+.info td:nth-child(2n+1){
+    text-align: right;
+}
+.skl{
+    width: 600px;
+    position: absolute;
+    top: 300px;
+    left:50%;
+    margin-left: -300px;
+}
+.skl td:nth-child(2n+1){
+    width: 40%;
+    font-weight:700;
+    font-size: 20px;
+    text-align: center;
+    color:rgb(33, 153, 224);
+
+}
+.skl td:nth-child(2n){
+    width: 60%;padding-top: 20px;
+}
+.skl tr{
+    height:40px;
+}
+.timeLineWrapper{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.timePart{
+    height: 200px;
+}
+.timePoint{
+    height:30px;
+    width: 30px;
+    border-radius: 15px;
+    background:radial-gradient(#F7F7F7,#9AB6F1);
+    position: relative;
+}
+.timePoint:hover{
+    box-shadow: 5px 5px 2px #9AB6F1;
+}
+.timePoint:hover .Ttitle{
+    color:#6F6D6D;
+    font-weight:700;
+}
+.timePoint::after{
+    content: '';
+    position: absolute;
+    top:30px;
+    left:13.5px;
+    height: 180px;
+    width:3px;
+    background:linear-gradient(to left,#B7CAF2,white,#B7CAF2);
+}
+.Ttitle{
+    width:200px;
+    position: relative;
+    left:60px;
+    top:-5px;
+    font-family: "Microsoft YaHei";
+    font-size: 17px;
+    color:white;
+    font-weight:500;
+}
+.timeline{
+    transform-origin:bottom;
+    animation: timeIn  1s linear;
+}
+@keyframes timeIn{
+    0%{
+        transform: rotateZ(-30deg);
+    }
+    20%{
+        transform: rotateZ(15deg);
+    }
+    60%{
+        transform: rotateZ(-15deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
+.timeLine{
+    position: relative;
+    left:0;
+}
+.pullleft{
+    margin-left:-200px;
+    transition: margin-left 1s;
+}
+.timeLine::after{
+    clear:both;
+}
+.timePart{
+    cursor: pointer;
+}
+.Tcnt{
+    height: 0;
+    width: 500px;
+    position: fixed;
+    right:20%;
+    top:240px;
+    background-color: rgba(0, 0, 255, 0.19);
+    overflow: hidden;
+}
+.Tcnt-show{
+    height: 700px;
+    transition:top,height 1s,1s;
+    line-height: 30px;
+}
+.Tcnt p{
+    margin: 50px;
+    color:#717171;
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+}
+.Tcnt h3{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -25px;
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+    color:#717171;
+    font-weight: 700;
+}

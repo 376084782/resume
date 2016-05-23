@@ -1,0 +1,11 @@
+<div class="exp main">
+    <menu></menu>
+<div class="left"><a href="#skills"><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+    <div class='timeLineWrapper' ng-controller="expmes">
+        <div class='timeLine'>
+            <timeline  class="timeline">
+                <tcontent ng-repeat='items in projects' t-name="items.name" t-cnt="items.content" time="items.time">
+                </tcontent>
+            </timeline>
+        </div></div>
+</div>
